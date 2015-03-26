@@ -87,7 +87,8 @@ exports.ghpages = extend(common, {
             },
         }),
         new HtmlWebpackPlugin({
-            title: pkg.name + ' - ' + pkg.description
+            title: pkg.name + ' - ' + pkg.description,
+            template: 'templates/index.tpl',
         }),
     ],
     module: {

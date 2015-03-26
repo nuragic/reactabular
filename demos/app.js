@@ -6,21 +6,19 @@ var Fork = require('react-ghfork');
 var FullTable = require('./full_table.jsx');
 var EditorsTable = require('./editors_table.jsx');
 
-var readme = require('../README.md');
-
 
 module.exports = React.createClass({
     displayName: 'App',
     render() {
         return (
-            <div className='pure-g'>
+            <span>
                 <Fork className='right' project='bebraw/reactabular' />
                 <header className='pure-u-1'>
                     <h1>Reactabular</h1>
 
                     <div className='description'>Spectacular tables for React.js</div>
                 </header>
-                <article className='pure-u-1'>
+                <article className='main pure-u-1'>
                     <section className='demonstration'>
                         <div className='description'>
                             <h2>Demonstration</h2>
@@ -43,13 +41,8 @@ module.exports = React.createClass({
 
                         <EditorsTable/>
                     </section>
-                    <section className='documentation'>
-                        <h2>README</h2>
-
-                        <div dangerouslySetInnerHTML={{__html: readme}}></div>
-                    </section>
                 </article>
-            </div>
+            </span>
         );
     },
 });

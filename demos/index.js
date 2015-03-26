@@ -8,6 +8,7 @@ require('react-pagify/style.css');
 require('./main.css');
 require('./skylight.css');
 require('../style.css');
+require('../README.md');
 
 var React = require('react');
 var App = require('./app');
@@ -16,5 +17,5 @@ var App = require('./app');
 main();
 
 function main() {
-    React.render(<App />, document.body);
+    React.render(<App />, document.getElementById('app'));
 }
